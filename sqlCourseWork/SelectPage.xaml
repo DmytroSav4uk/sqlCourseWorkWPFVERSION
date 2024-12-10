@@ -1,0 +1,45 @@
+﻿<Page x:Class="sqlCourseWork.SelectPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Select Queries">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" /> 
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+       
+        <StackPanel Grid.Row="1" Margin="0,0,0,10">
+            <TextBlock Text="Переписка між користувачами" Margin="0,5" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="SenderIdTextBox" Width="100" Margin="5"  />
+                <TextBox x:Name="ReceiverIdTextBox" Width="100" Margin="5"  />
+                <Button Content="Отримати переписку" Width="150" Click="GetMessagesButton_Click" />
+            </StackPanel>
+        </StackPanel>
+
+        
+        <StackPanel Grid.Row="2" Margin="0,0,0,10">
+            <TextBlock Text="Отримати коментарі під постом" Margin="0,5" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="PostIdTextBox" Width="100" Margin="5" />
+                <Button Content="Отримати коментарі" Width="150" Click="GetCommentsButton_Click" />
+            </StackPanel>
+        </StackPanel>
+
+        
+        <StackPanel Grid.Row="3" Margin="0,0,0,10">
+            <TextBlock Text="Отримати всі залайкані пости користувача" Margin="0,5" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="UserIdTextBox" Width="100" Margin="5" />
+                <Button Content="Отримати лайки" Width="150" Click="GetLikedPostsButton_Click" />
+            </StackPanel>
+        </StackPanel>
+
+        
+        <DataGrid x:Name="ResultsDataGrid" Grid.Row="4" AutoGenerateColumns="True" />
+    </Grid>
+</Page>

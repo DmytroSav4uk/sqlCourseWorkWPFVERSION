@@ -1,0 +1,52 @@
+﻿<Page x:Class="sqlCourseWork.UpdateQueriesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Update Queries">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+      
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock Text="Оновити повідомлення" Margin="0,5" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="MessageIdTextBox" Width="100" Margin="5"  />
+                <TextBox x:Name="NewMessageContentTextBox" Width="300" Margin="5"  />
+                <Button Content="Оновити повідомлення" Width="200" Margin="5" Click="UpdateMessageButton_Click" />
+            </StackPanel>
+        </StackPanel>
+
+     
+        <StackPanel Grid.Row="1" Margin="0,0,0,10">
+            <TextBlock Text="Оновити коментар" Margin="0,5" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="CommentIdTextBox" Width="100" Margin="5"  />
+                <TextBox x:Name="NewCommentContentTextBox" Width="300" Margin="5" />
+                <Button Content="Оновити коментар" Width="200" Margin="5" Click="UpdateCommentButton_Click" />
+            </StackPanel>
+        </StackPanel>
+
+     
+        <StackPanel Grid.Row="2" Margin="0,0,0,10">
+            <TextBlock Text="Оновити пост" Margin="0,5" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="PostIdTextBox" Width="100" Margin="5"  />
+                <TextBox x:Name="NewPostContentTextBox" Width="300" Margin="5" />
+                <Button Content="Оновити пост" Width="200" Margin="5" Click="UpdatePostButton_Click" />
+            </StackPanel>
+        </StackPanel>
+
+   
+        
+        <DataGrid x:Name="OldResultsDataGrid" Grid.Row="3" AutoGenerateColumns="True" Margin="0,10" />
+
+      
+        
+        <DataGrid x:Name="UpdatedResultsDataGrid" Grid.Row="4" AutoGenerateColumns="True" Margin="0,10" />
+    </Grid>
+</Page>
